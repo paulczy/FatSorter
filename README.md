@@ -19,6 +19,7 @@ FatSorter <directory> [--verbose] [--log-file <path>] [--yes]
 `--yes` skips the confirmation prompt. Omit it if you want the tool to pause before making changes.
 
 ```powershell
+# Windows
 .\FatSorter.exe E:\ --yes
 .\FatSorter.exe E:\ --verbose --log-file .\fat-sorter.log
 ```
