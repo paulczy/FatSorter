@@ -25,6 +25,7 @@ FatSorter <directory> [--verbose] [--log-file <path>] [--yes]
 
 ```bash
 # macOS
+chmod +x ./FatSorter
 ./FatSorter /Volumes/SDCARD --yes
 ./FatSorter /Volumes/SDCARD --verbose --log-file fat-sorter.log
 
@@ -33,6 +34,8 @@ chmod +x ./FatSorter
 ./FatSorter /mnt/sdcard --yes
 ./FatSorter /media/$USER/SDCARD --verbose --log-file fat-sorter.log
 ```
+
+> **macOS Gatekeeper:** The first time you run FatSorter, macOS may block it because it is not signed. Go to **System Settings > Privacy & Security**, scroll down to the security section, and click **Allow Anyway** next to the FatSorter message. Then run the command again.
 
 ## Local Publish
 
