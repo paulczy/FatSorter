@@ -6,7 +6,7 @@ Reorder directory entries by moving files and folders into a temporary directory
 
 1. Open the GitHub [Releases](https://github.com/paulczy/FatSorter/releases) page.
 2. Download the zip file for your platform:
-   `win-x86`, `win-x64`, `win-arm64`, or `osx-arm64`.
+   `win-x86`, `win-x64`, `win-arm64`, `linux-x64`, `linux-arm64`, or `osx-arm64`.
 3. Extract the archive.
 4. Run `FatSorter` against the mounted FAT volume you want to reorder.
 
@@ -24,8 +24,14 @@ FatSorter <directory> [--verbose] [--log-file <path>] [--yes]
 ```
 
 ```bash
+# macOS
 ./FatSorter /Volumes/SDCARD --yes
 ./FatSorter /Volumes/SDCARD --verbose --log-file fat-sorter.log
+
+# Linux
+chmod +x ./FatSorter
+./FatSorter /mnt/sdcard --yes
+./FatSorter /media/$USER/SDCARD --verbose --log-file fat-sorter.log
 ```
 
 ## Local Publish
@@ -35,6 +41,8 @@ Self-contained single-file builds are supported for:
 - `win-x86`
 - `win-x64`
 - `win-arm64`
+- `linux-x64`
+- `linux-arm64`
 - `osx-arm64`
 
 Run:
