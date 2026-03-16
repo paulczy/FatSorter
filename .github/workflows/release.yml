@@ -83,7 +83,8 @@ jobs:
             Remove-Item $archivePath -Force
           }
 
-          Compress-Archive -Path "publish/$rid/*" -DestinationPath $archivePath
+          $files = Get-ChildItem "publish/$rid" -Exclude '*.pdb'
+          Compress-Archive -Path $files.FullName -DestinationPath $archivePath
 
       - name: Upload packaged artifact
         uses: actions/upload-artifact@v4
